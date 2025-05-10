@@ -5,8 +5,20 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   standalone: false,
   styleUrl: './app.component.css'
+  // styles: [`
+  //   h3 {
+  //     color: dodgerblue;
+  //   }
+  // `]
 })
 export class AppComponent {
-  title: "my-first-app";
-  name: "Deana";
+  username = '';
+  showSecret = false;
+  log = [];
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date());
+  }
 }
